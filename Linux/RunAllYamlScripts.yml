@@ -1,0 +1,11 @@
+#YAML
+---
+ #Run all playbooks.
+- name: Deploying DVWA
+  import_playbook: /etc/ansible/playbook.yml
+- name: Deploying elk Server
+  import_playbook: /etc/ansible/elkPB.yml
+- name: Deploying Filebeat
+  import_playbook: /etc/ansible/roles/filebeat-playbook.yml
+- name: Deploying Metricbeat
+  import_playbook: /etc/ansible/roles/metricbeat-playbook.yml

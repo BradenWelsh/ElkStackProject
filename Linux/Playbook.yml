@@ -1,0 +1,34 @@
+#FYAML
+---
+  - name: Configure Web w/ Docker
+    hosts: webservers
+    become: true
+    tasks:
+
+    - name: docker.io
+      apt:
+        update_cache: yes
+        name: docker.io
+        state: present
+
+    - name: Installing pip3
+      apt:
+        name: python3-pip
+        state: present
+
+    - name: Install Docker-Python
+      pip:
+        name: docker
+        state: present
+
+    - name: Docker web container DVWA
+      docker_container:
+        name: dvwa
+        image: cyberxsecurity/dvwa
+        state: started
+        published_ports: 80:80
+
+    - name: Enabling Docker
+      systemd:
+        name: docker
+        enabled: true
