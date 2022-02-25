@@ -6,11 +6,11 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook files may be used to install only certain pieces of it, such as Filebeat.
 
-![My ElkPlaybook.](./Linux/ElkPB.yml)
-![My Filebeat-Playbook.](./Linux/filebeat-playbook.yml)
-![My metricbeat-playbook.](./Linux/metricbeat-playbook.yml)
-![My playbook.](./Linux/Playbook.yml)
-![My Playbook to run all playbooks.](./Linux/RunAllYamlScripts.yml)
+- ![My ElkPlaybook.](./Linux/ElkPB.yml) 
+- ![My Filebeat-Playbook.](./Linux/filebeat-playbook.yml)
+- ![My metricbeat-playbook.](./Linux/metricbeat-playbook.yml)
+- ![My playbook.](./Linux/Playbook.yml)
+- ![My Playbook to run all playbooks.](./Linux/RunAllYamlScripts.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -65,7 +65,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - The playbook installs a DVWA docker container, installs pip3, installs Docker-Python, and Enables Docker on boot. 
-- The elkServer playbook deploys and launches a elk docker container with the published ports of 5601 9200 and 5044. 
+- The elkServer playbook deploys and launches a elk docker container with the published ports of 5601 9200 and 5044 and increased virtual memory. 
 - The metricbeat and filebeat yml files are deployed onto the server and monitors logs.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
