@@ -25,8 +25,8 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly secure, in addition to restricting others to the network.
-- Load Balancers protect against Denial-of-Service (DoS) and Distributed Denial-Of-Service (DDoS) attacks by shifting traffic to a public cloud provider. The avantage of a jumpbox is so we can connect / montior multiple servers from a single machine, and restrict everyone else from connecting to those machines aswell._
+Load balancing ensures that the application will have more reliable availability.
+- Load Balancers protect against Denial-of-Service (DoS) and Distributed Denial-Of-Service (DDoS) attacks by allowing webservers to divide and conquer influxes of traffic by sharing resources to host a DVWA as shown in this exercise. The avantage of a jumpbox is so we can connect / montior multiple servers from a single machine, and restrict everyone else from connecting to those machines aswell._
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - _Filebeat_ forwards and centralizes log data. It monitors the log files and locations that you specify; then forwards them to Elasticsearch.
